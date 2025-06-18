@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calcular média</title>
+</head>
+<body>
+  <h2>Média de notas</h2>
+  <p id="resultado"></p>
+  <script>
+    function calcularMedia(notas) {
+      let soma = 0;
+      for (let i = 0; i < notas.length; i++) {
+        soma += notas[i];
+      }
+      return soma / notas.length;
+    }
+    let notas = [7, 8, 9];
+    let media = calcularMedia(notas);
+    console.log(media);
+    document.getElementById("resultado").textContent = `Média: ${media.toFixed(2)}`;
+     //O uso de "<=" no lugar de "<" faz com que procure fora do array
+  </script>
+</body>
+</html>

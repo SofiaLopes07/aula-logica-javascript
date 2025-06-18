@@ -1,44 +1,55 @@
-//Maratona 5
-//Exercício 1
-let temperatura = [17.5 ,15.0 ,16.0 ,14.5 ,17.0];
-console.log("Temperaturas da semana", temperatura);
  
-for(let i = 0; i <temperatura.lenght; i++){
-    console.log(`Dia ${i +1}: ${temperatura[i]}`);
+// 1Exercicio vetor
+let Temperatura = [29, 24, 18, 30, 27];
+ 
+for (let i = 0; i < Temperatura.length; i++ ){
+    console.log(`${Temperatura[i]} °C`);
+ 
 }
-
 let soma = 0;
-for(let i = 0; i < temperatura.lenght; i++){
-    soma += temperatura[i];
+for (let temp of Temperatura){
+    soma += temp;
 }
-
-let media = soma/temperatura.lenght;
-
-console.log(`Temperatura media da semana: ${media.toFixed(2)}`);
-
-//Exercício 2
-let temp = {
-   SãoPaulo: [16, 15, 14],
-   Riodejaneiro: [21, 21, 20],
-   Curitiba: [14, 12, 13]
-};
- for (let cidade in temp) {
-   console.log(`${cidade}: ${temp[cidade]}`);
+let media = soma / Temperatura.length;
+console.log(`Temperatura Média da semana: ${media.toFixed(2)}°C`);
+ 
+// 2-Exercício de Matriz
+ 
+let temperatura = [
+  [16.0, 17.5, 18.0], // São Paulo
+  [21.0, 22.0, 20.5], // Rio de Janeiro
+  [18.0, 19.0, 19.5]  // Mogi das Cruzes
+];
+ 
+let cidade = ["São Paulo", "Rio de Janeiro", "Mogi das Cruzes"];
+ 
+console.log("Temperatura durante 3 dias:");
+for (let i = 0; i < temperatura.length; i++) {
+  let linha = `${cidade[i]}: `;
+  for (let j = 0; j < temperatura[i].length; j++) {
+    linha += `${temperatura[i][j]}°C `;
+  }
+  console.log(linha);
 }
  
-for (let cidade in temp) {
-   let temperaturas = temp[cidade];
-   let soma = temperaturas.reduce((a, b) => a + b, 0);
-   let media = soma / temperaturas.length;
-   console.log(`${cidade}: média de temperatura = ${media.toFixed(2)}°C`);
+console.log("\nMédia de temperatura por cidade:");
+for (let i = 0; i < temperaturas.length; i++) {
+  let soma = 0;
+  for (let j = 0; j < temperaturas[i].length; j++) {
+    soma += temperaturas[i][j];
+  }
+  let mediatemp = soma / temperaturas[i].length;
+  console.log(`Média de ${cidades[i]}: ${mediatemp.toFixed(2)}°C`);
 }
  
-//Exercício 3
+// 3-Exercício de ordenação de vetor
 let precos = [19.90, 5.50, 12.30, 25.00, 8.75];
-procos.sort(function(a,b){
-   return a - b;
-});
-console.log("Preços em ordem crescente");
-for (let i = 0; i < precos.length; i++){
-    console.log(`R$ ${precos[i].toFixed(2)}`);
+precos.sort((a, b) => a - b);
+ 
+console.log("Preços em ordem crescente:");
+for (let preco of precos) {
+ 
+  console.log(`R$ ${preco.toFixed(2)}`);
 }
+ 
+ 
