@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5); /*Fundo degradê*/
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>Conversor de Fahrenheit para Celsius</h2>
+        <input type="number" id="fahrenheit" placeholder="Digite °F">
+
+        <button onclick="converter()">Converter</button>
+        <div class="resultado" id="resultado"></div>
+    </div>
+</body>
+</html>
